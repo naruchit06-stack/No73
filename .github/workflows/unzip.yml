@@ -1,0 +1,22 @@
+name: Unzip project
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unzip into repo root
+        run: |
+          if [ ! -f No73-repo.zip ]; then echo "no zip found"; exit 0; fi
+          unzip -q No73-repo.zip
+          rm -rf app/.git
+          cp -a app/. .
+          rm -rf app No73-repo.zip
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Add No.73 project" || exit 0
+          git push
