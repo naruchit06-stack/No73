@@ -1,0 +1,19 @@
+{
+  "name": "No.73",
+  "short_name": "No.73",
+  "description": "ฟังนิยายเสียงออนไลน์ บันทึกตำแหน่งการฟังและฟังต่อได้ทุกเวลา",
+  "lang": "th",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#171a1b",
+  "theme_color": "#171a1b",
+  "categories": ["books", "entertainment"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
